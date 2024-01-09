@@ -1,0 +1,932 @@
+/***Haut Principal***/
+body {
+    font-family: Roboto,sans-serif;
+    margin: 0;
+}
+
+.loadScreen {
+    background: white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeout 0.2s 3s forwards;
+}
+.spinnerBig {
+    position: absolute;
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    border: 1rem solid rgba(161, 160, 160, 0);
+    border-top: 1rem solid #9356dc;
+    border-left: 1rem solid #9356dc;
+    border-bottom: 1rem solid #9356dc;
+    animation: spinneroff 0.8s 0.2s 5;
+}
+.spinner{
+    font-family: 'Shrikhand', "cursive";
+    font-size: 27px;
+    animation: 10s;
+}
+@keyframes fadeout{
+    0%{
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+@keyframes spinneroff{
+    0%{
+        transform: rotate(360deg);
+    }
+    100% {
+       transform: rotate(0deg);
+    }
+}
+
+.header {
+    height: 75px;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,.25);
+    position: relative;
+}
+
+img.headerlogo {
+    position: absolute;
+    height: 35px;
+    left: 25%;
+    top: 24px;
+}
+
+.lieu {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 20px;
+    background-color: #EAEAEA;
+}
+
+.lieu__icon {
+    margin-right: 1rem;
+}
+
+.fa-map-marker-alt {
+    color: #353535;
+    padding-left: 7rem;
+    margin-left: -50px;
+}
+
+.place{
+    font-size: 18px;
+    border: none;
+    background-color: #EAEAEA;
+    outline: none;
+}
+
+input::placeholder {
+    font-weight: bold;
+    opacity: 2;
+    color: #353535;
+}
+
+.hero {
+    text-align: center;
+    background-color: #f6f6f6;
+    height: 21rem;
+}
+
+.hero__title {
+    margin: 0;
+}
+
+h1.hero__title{
+    padding: 53px;
+    
+}
+
+p.hero__subtitle {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 100;
+    padding-bottom: 40px;
+    margin-top: -24px;
+}
+
+h1.sectiontitle{
+    font-size: 22px;
+}
+
+.hero__button {
+    border: 0;
+    padding: 19px 30px;
+    font-size: 15px;
+    border-radius: 100px;
+    color: #fff;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+    text-decoration: none;
+}
+.hero__button:hover{
+    background-image: linear-gradient(#f792da, #a37ecf);
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.722)
+}
+
+
+/***Navigation Fonctionnement***/
+
+section.functioning.container {
+    margin-left: 20px;
+}
+
+h2.ftitle{
+    font-size: 22px;
+    margin-left: -12px;
+}
+
+p.choix{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.choix-list_cards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 13px 5px 13px 30px;
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 600;
+    box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
+    font-size: 20px;
+    gap: 2rem;
+}
+
+.choix-list_cards .number {
+    position: absolute;
+    left: 0;
+    transform: translate(-15px);
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    background-color: #9356DC;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+p.number{
+   padding-top: 3px;
+}
+
+.fa-mobile-alt { 
+    margin-right: 1rem;
+    color: #7E7E7E;
+    font-size: 1.5rem;
+}
+.fa-mobile-alt:hover{
+    color: #9356DC;
+}
+
+.fa-list-ul { 
+    margin-right: 1rem;
+    color: #7E7E7E;
+    font-size:  1.5rem;
+}
+.fa-list-ul:hover{
+   color: #9356DC;
+}
+
+.fa-store { 
+    margin-right: 1rem;
+    color: #7E7E7E;
+    font-size:  1.5rem;
+}
+.fa-store:hover{
+    color: #9356DC;
+}
+
+
+/**Restaurant**/
+
+.restaurants {
+    background: #f6f6f6;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*.restaurants-container {
+    display: flex;
+    flex-wrap: wrap;
+}*/
+
+.restaurants-card {
+    background-color: #FFF;
+    border-radius: 30px;
+    box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
+    margin-bottom: 20px;
+    position: relative;
+}
+.restaurants-card:hover{
+    box-shadow: 10px 10px 10px rgba(39, 28, 38, 0.25);
+}
+
+.restaurants-card a {
+    text-decoration: none;
+    color: #000;
+}
+
+.restaurants-card img {
+    width: 100%;
+    height: 12rem;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin: auto;
+    object-fit: cover;
+}
+
+.new{
+    background: #a9e0d1;
+    color: #3b8468;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.3rem;
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    font-size: 20px;
+}
+
+
+.restaurants-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.restaurants-content h2 {
+    margin: 0;
+    padding-top: 10px;
+    font-size: 22px;
+}
+
+
+.restaurants-content p {
+    margin: 0;
+    margin-top: -17px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-family: Roboto;
+    font-weight: 100;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.fa-thin, .far {
+    font-weight: 400;
+    width: 40px;
+    height: 21px;
+    left: 459px;
+    top: 459px;
+    font-size: 35px;
+}
+
+.btn-like {
+    border: none;
+    background-color: white;
+}
+.btn-like i {
+  font-size: 2rem;
+}
+.btn-like i:hover {
+   font-weight: 700;
+   background-image: linear-gradient(180deg, #FF79DA, #9356DC);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   -moz-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/**footer**/
+footer {
+    padding: 10px;
+    background: #383838;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+p.omf__text {
+    font-family: 'Shrikhand', "cursive";
+    color: #fff;
+    font-size: 23px;
+}
+p.omf__text_p {
+    font-family: 'Shrikhand', "cursive";
+    color: #fff;
+    font-size: 23px;
+}
+
+footer ul {
+    list-style: none;
+    margin-left: -40px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+footer ul li {
+    margin: 0.5rem 0;
+}
+
+i.fas.fa-utensils{
+   margin-right: 18px;
+}
+
+i.fas.fa-hands-helping{
+    margin-right: 18px;
+}
+
+
+/**PAGE CARTE**/
+
+header.headerP{
+    padding: 1rem;
+    box-shadow: none;
+}
+
+img.headerlogoP {
+    height: 27px;
+    margin-left: 75px;
+    margin-bottom: -10px;
+}
+ 
+a.lienretour{
+    font-size: 1.50rem;
+    color: white;
+}
+
+i.fa-solid.fa-arrow-left{
+    color: #000;
+}
+
+.paletteimg{
+    width: 100%;
+    object-fit: cover;
+}
+
+div.cart{
+    background-color: #F7F7F7;
+    padding: 0px 0px 10px 39px;
+    border-radius: 40px;
+    top: -65px;
+    position: relative;
+    height: 80rem;
+}
+
+
+/**La note enchantée**/
+div.cartL{
+    height: 91rem;
+    background-color: #F7F7F7;
+    padding: 0px 0px 10px 46px;
+    border-radius: 40px;
+    margin-top: -147px;
+    position: relative;
+}
+
+/**ENTREE**/
+h1.titleP{
+    font-family: shrikhand, cursive;
+    font-size: 25px;
+    position: relative;
+    top: 20px; 
+}
+
+.btn-likeP {
+    margin-left: 80%;
+    border: none;
+    display: flex;
+    margin-top: -28px;
+}
+
+.btn-likeP i {
+  font-size: 25px;
+}
+.btn-likeP i:hover {
+   font-weight: 700;
+   background-image: linear-gradient(180deg, #FF79DA, #9356DC);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   -moz-text-fill-color: transparent;
+    background-clip: text;
+    animation: full-heart 300ms ease-in-out both;
+}
+
+h2.listeEntrée{
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 45px;
+    margin-left: -30px;
+}
+
+.underline-h2 {
+    border: 2px solid #99E2D0;
+    width: 40px;
+    margin-left: -28px;
+    margin-top: -10px;
+}
+
+article.menuArticles{
+    background: #FFFFFF;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    border-radius: 15.0431px;
+    height: 81px;
+    position: relative;
+    top: 20px;
+    left: -28px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    transition: all 2000ms;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation-name: appear;
+    animation-duration: 1000ms;
+    animation-fill-mode: backwards;
+}
+
+div.Menu{
+    transform: scale(0);
+    animation-name: listeMenu;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+div.Menu1{
+    transform: scale(0);
+    animation-name: listeMenu;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+div.Menu2{
+    transform: scale(0);
+    animation-name: listeMenu;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+}
+
+@keyframes listeMenu{
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+div.m_choixEntrées{
+    white-space: nowrap;
+    display: flex;
+    flex: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 700ms;
+    padding-top: 10px;
+
+}
+
+div.Menu h4 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: larger;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+div.Menu h3 {
+  margin-left: 20px;
+  margin-top: 2%;
+  font-size: 15px;
+}
+
+div.Menu p {
+  margin-bottom: 5px;
+}
+
+.m_descriptionCarte {
+    flex: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.m_descriptionCarte p {
+  margin-top: -6px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 100;
+  text-overflow: ellipsis;
+  margin-left: 20px;
+}
+
+div.m_prixCompo {
+  font-weight: bold;
+}
+
+.m_checkChoix{
+    flex: 0%;
+    color: #f6f6f6;
+    background-color: #99e2d0;
+    font-size: xx-large;
+    text-align: center;
+    line-height: 2.9em;
+    transform: translateX(100px);
+    transition: all 700ms;
+}
+.menuArticles:hover > .m_checkChoix {
+  flex: 25%;
+  transform: translateX(0px);
+  background-color: #99e2d0;
+  cursor: pointer;
+  color: #f6f6f6;
+}
+.fa-check-circle {
+    transform: rotate(359deg);
+    transition: transform 700ms;
+}
+.fa-check-circle:hover {
+    transform: rotate(0deg);
+}
+
+
+/**BOUTON**/
+div.commander{
+    margin-top: 18%;
+    position: relative;
+    margin-left: 4rem;
+}
+
+.hero__button_P {
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    color: white;
+    border: 0;
+    padding: 1rem 3rem;
+    border-radius: 100px;
+}
+
+.hero__button_P:hover{
+    background-image: linear-gradient(#f792da, #a37ecf);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.693);
+}
+
+.footer_p{
+    margin-top: -98px;
+    position: relative;
+}
+
+/* (Tablette 768px) */
+@media (min-width: 768px){
+
+    img.headerlogo {
+        left: 37%;
+    }
+
+    h1.titleP{
+        margin-left: 25%;
+    }
+
+    .hero {
+        padding-left: 10px;
+    }
+
+    p.hero__subtitle {
+        font-size: 25px;
+    }
+
+    .hero__button {
+        font-size: 25px;
+    }
+
+    .fa-mobile-alt{
+        margin-left: 20px;
+        font-size: 30px;
+    }
+    .fa-list-ul {
+        margin-left: 20px;
+        font-size: 30px;
+    }
+    .fa-store{
+        margin-left: 20px;
+        font-size: 30px;
+    }
+
+    p.choix {
+        font-size: 25px;
+        margin-left: 19%;
+    }
+
+    .restaurants-card img {
+        height: 16rem;
+    }
+
+ /**PAGE CARTE**/
+
+    img.headerlogoP {
+        margin-left: 34%;
+    }
+
+    .btn-likeP {
+        margin-left: 68%;
+        margin-top: -26px;
+    }
+
+    section.listeMenu{
+        margin-bottom: 70px;
+        margin-left: -28px;
+    }
+    
+    div.cart{
+        padding: 0px 0px 10px 80px;
+        height: 84rem;
+        margin-top: -100px;
+    }
+
+    div.cartL{
+        height: 93rem;
+        padding: 0px 0px 10px 80px;
+    }
+
+    div.m_descriptionCarte p {
+       font-size: 16px;
+       margin-top: -8px;
+    }
+
+    div.Menu h3, div.Menu p {
+        font-size: 18px;
+    }
+
+
+    h2.listeEntrée{
+        font-size: 22px;
+        margin-left: 40px;
+    }
+    
+    .underline-h2 {
+        margin-left: 39px;
+    }
+    
+    article.menuArticles{
+        left: 38px;
+        width: 37rem;
+    }
+
+    div.commander{
+        margin-left: 28%;
+        margin-top: -10px;
+    }    
+
+    p.omf__text_p{
+        font-size: 32px;
+    }
+
+    footer ul li a{
+        font-size: 22px;
+    }
+
+    .footer_p {
+        margin-top: -75px;
+        position: relative;
+    }
+    
+}
+
+
+/* (Ordinateur 1024px) */
+@media (min-width: 1024px) {
+    .header{
+        box-shadow: none;
+    }
+    img.headerlogo {
+        margin-left: 5%;
+    }
+    .place {
+        font-size: 16px;
+        margin-right: 3rem;
+    }
+    h1.hero__title {
+        font-size: 35px;
+    }
+    p.hero__subtitle {
+        font-size: 17px;
+    }
+    .hero__button {
+        font-size: 15px;
+        padding: 20px 32px;
+    }
+    h2.ftitle{
+        margin-left: 17%;
+        font-size: 24px;    
+    }    
+    .choix-list {
+        display: flex;
+        margin-left: 8%;
+        margin-top: 2%;
+    }
+    .restaurants-card img {
+        width: 31rem;
+    }
+    .choix-list_cards {
+        width: 20%;
+        margin-left: 10%;
+    }
+    .choix-list_cards .number {
+        width: 33px;
+    }
+    p.choix {
+        font-size: 12px;
+        margin-left: -23px;
+    }
+    p.number{
+      font-size: 16px;  
+    }
+    .choix-list_cards .number{
+        height: 30px;
+    }
+    .fa-mobile-alt{
+        margin-left: 0px;
+        font-size: 20px;
+    }
+    .fa-list-ul {
+        margin-left: 0px;
+        font-size: 20px;
+    }
+    .fa-store{
+        margin-left: 0px;
+        font-size: 20px;
+    }
+    section.functioning.container {
+        margin-left: -105px;
+    }
+    h1.sectiontitle {
+        font-size: 24px;
+        margin-left: 12%;
+    }
+    h2{
+        margin-left: 11%;
+    }
+    .restaurants-container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 9px;
+        flex-wrap: wrap;
+    }
+    .restaurants-card {
+        margin-bottom: 34px;
+    }
+    footer{
+        padding-top: 3%;
+    }
+    footer ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 22%;
+        margin-top: -60px;
+    }
+    p.omf__text{
+        margin-left: 87%;
+    }
+    footer ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+    }
+    footer ul li{
+        margin-left: 73px;
+    }
+
+  /**PAGE CARTE**/
+  header.headerP{
+    position: relative;
+ }
+  img.headerlogoP {
+      margin-left: 43%;
+   }
+
+   .paletteimg {
+    max-height: 32rem;
+    width: 100%;
+   }
+
+   .btn-likeP {
+      margin-left: 61%;
+    }
+
+    div.cart {
+        border-radius: 2rem 2rem 0 0;
+        background-color: #f6f6f6;
+        margin-left: 14%;
+        width: 74%;
+    }
+
+    div.cartL{
+        margin-left: 25%;
+        margin-left: 14%;
+        width: 74%;
+    }
+
+    section.listeMenu {
+        margin-left: 5px;
+        margin-top: -9px;
+    }
+
+    a.titleP {
+      font-size: 30px;
+      margin-left: -22px;
+    }
+
+    h2.listeEntrée{
+        margin-left: 113px;
+        margin-top: 80px;
+        font-size: 18px;
+    }
+
+    .underline-h2 {
+        margin-left: 11%;
+    }
+
+    article.menuArticles {
+        left: 10%;
+        width: 67%;
+    }
+
+    div.menuText{
+        padding-top: 20px;
+        padding-right: 32rem;
+    }
+
+    h3.menuTitre {
+        font-size: 19px;
+    }
+
+    p.menuCompo {
+        font-size: 15px;
+    }
+
+    b {
+        margin-left: 37rem;
+    }
+
+    a.hero__button_P{
+        margin-left: 26%;
+    }
+
+    div.commander{
+        margin-left: 97px;
+        margin-top: -14px;
+    }  
+
+    footer.footer_p{
+        width: 100%;
+    }
+
+    p.omf__text_p{
+        font-family: 'Shrikhand', "cursive";
+        font-size: 22px;
+        margin: 0 0 1rem;
+        color: #fff;
+        margin-left: 84%;
+    }
+
+    ul.P{
+        margin-top: -50px;
+    }
+
+    a.p{
+        font-size: 14px;
+        margin-left: -23px;
+    }
+  }
+ 
